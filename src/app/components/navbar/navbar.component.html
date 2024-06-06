@@ -1,0 +1,54 @@
+<nav class="px-8 py-4 flex justify-between items-center md:flex-col md:py-10">
+    <div class="flex gap-2 items-center justify-center md:mb-16">
+        <img src="../../../assets/logo.svg" alt="" class="w-6">
+        <p class="font-Mouthwing text-xl translate-y-1">HealthSync</p>
+    </div>
+
+    <ul class="hidden md:flex flex-col gap-4">
+        <li class="navemelent-class"><span class="material-symbols-rounded">Dashboard</span>Dashboard</li>
+        <li class="navemelent-class"><span class="material-symbols-rounded">
+                explore
+            </span>Tracking</li>
+        <li class="navemelent-class"><span class="material-symbols-rounded">
+                receipt_long
+            </span>Billing Details</li>
+        <li class="navemelent-class"><span class="material-symbols-rounded">
+                history
+            </span>Previous History</li>
+        <li class="navemelent-class"><span class="material-symbols-rounded">
+                settings
+            </span>Settings</li>
+    </ul>
+
+    <div class="md:hidden">
+        <button (click)="toogleMenu()">
+            @if (dropdown) {
+                <span class="material-symbols-rounded">close</span>
+            }@else {
+                <span class="material-symbols-rounded">menu</span>
+            }            
+        </button>
+    </div>
+
+
+    @if (dropdown) {
+        <div class="absolute top-16 left-0 w-full bg-white shadow-md z-10 py-4 px-8">
+            <ul class="flex flex-col gap-4">
+                <li class="navemelent-class"><span class="material-symbols-rounded">Dashboard</span>Dashboard</li>
+                <li class="navemelent-class"><span class="material-symbols-rounded">
+                        explore
+                    </span>Tracking</li>
+                <li class="navemelent-class"><span class="material-symbols-rounded">
+                        receipt_long
+                    </span>Billing Details</li>
+                <li class="navemelent-class"><span class="material-symbols-rounded">
+                        history
+                    </span>Previous History</li>
+                <li class="navemelent-class"><span class="material-symbols-rounded">
+                        settings
+                    </span>Settings</li>
+            </ul>
+        </div>
+    }
+    
+</nav>
